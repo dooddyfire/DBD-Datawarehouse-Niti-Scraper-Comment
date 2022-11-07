@@ -102,7 +102,8 @@ for i in r:
     #phone = driver.find_element(By.XPATH,"/html/body/div[1]/div[4]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/table/tbody/comment()[7]")
     #print(phone)
     #phone_lis.append(phone)
-
+# ปิด browser เมื่อ scrape หมดแล้ว
+driver.close()
 df = pd.DataFrame()
 df['เลขทะเบียน'] = r 
 df['สถานะนิติบุคคล'] = niti_place_lis
